@@ -1,0 +1,140 @@
+:root {
+  --testmonail-1: #5f3dc4;
+  --testmonail-2: #495057;
+  --testmonail-3: white;
+  --tertiary-text: white;
+  --text: #ccc;
+
+  --testmonail-4: #212529;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  padding: 6rem;
+  background-color: #e9ecef;
+}
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  display: grid;
+
+  grid-template-areas:
+    "one one two five "
+    "three four four five";
+  column-gap: 3rem;
+}
+.testemonail {
+  margin: 0 auto;
+  padding: 4rem;
+
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+}
+.testemonail--1 {
+  background-color: var(--testmonail-1);
+  grid-area: one;
+  position: relative;
+}
+svg {
+  position: absolute;
+  z-index: 1;
+  inset: 0 0 0 40rem;
+}
+.testemonail--2 {
+  background-color: var(--testmonail-2);
+  grid-area: two;
+}
+.testemonail--3 {
+  background-color: var(--testmonail-3);
+  grid-area: three;
+}
+.testemonail--4 {
+  background-color: var(--testmonail-4);
+  grid-area: four;
+}
+.testemonail--5 {
+  background-color: var(--testmonail-3);
+  grid-area: five;
+}
+.testemonial__img {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+p:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+img {
+  border-radius: 100%;
+  box-shadow: 0 0 0 3px #ccc;
+  width: 4rem;
+}
+.info {
+  margin-top: 3rem;
+}
+h3 {
+  color: var(--tertiary-text);
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+.discript {
+  color: var(--text);
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.color {
+  color: var(--testmonail-4);
+}
+.name {
+  color: #e9ecef;
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+}
+.testemonail--3 .name,
+.testemonail--5 .name {
+  color: var(--testmonail-4);
+}
+.work {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: #ccc;
+}
+
+@media (max-width: 80rem) {
+  html {
+    font-size: 56%;
+  }
+  .container {
+    max-width: 60rem;
+    grid-template-areas: "one" "two" "three" "four" "five";
+  }
+  .testemonail--1 {
+    background-color: var(--testmonail-1);
+    grid-area: one;
+  }
+  .testemonail--2 {
+    background-color: var(--testmonail-2);
+    grid-area: two;
+  }
+  .testemonail--3 {
+    background-color: var(--testmonail-3);
+    grid-area: three;
+  }
+  .testemonail--4 {
+    background-color: var(--testmonail-4);
+    grid-area: four;
+  }
+  .testemonail--5 {
+    background-color: var(--testmonail-3);
+    grid-area: five;
+  }
+}
